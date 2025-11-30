@@ -1,4 +1,7 @@
+"use client";
 // app/contact/page.tsx
+import {FormEvent} from "react";
+
 const FAQ = [
     {
         q: "온라인과 오프라인 정보는 어떻게 연계되나요?",
@@ -63,7 +66,7 @@ export default function ContactPage() {
                         문의 남기기
                     </h2>
                     <form
-                        onSubmit={(e) => e.preventDefault()}
+                        onSubmit={(e:FormEvent<HTMLFormElement>) => e.preventDefault()}
                         className="space-y-2 text-[11px]"
                     >
                         <div>
